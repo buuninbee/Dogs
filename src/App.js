@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserStorage } from "./UserContext";
+import User from "./components/User/User";
+import ProtectedRouter from "./components/Helpers/ProtectedRouter";
 
 function App() {
   return (
@@ -15,7 +17,15 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Login/*" element={<Login />} />
+            <Route path="Login/*" element={<Login />} />
+            <Route
+              path="conta/*"
+              element={
+                <ProtectedRouter>
+                  <User />
+                </ProtectedRouter>
+              }
+            />
           </Routes>
           <Footer />
         </UserStorage>

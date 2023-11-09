@@ -10,6 +10,7 @@
   max-width: 8rem;
   text-align: center;
   transition: 0.2s;
+  border: none;
 }
 
 .button:hover,

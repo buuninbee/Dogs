@@ -6,6 +6,10 @@ const types = {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: "Preencha um email valido",
   },
+  number: {
+    regex: /^\d+$/,
+    message: "utilize apenas numeros",
+  },
 };
 
 const useForm = (type) => {
@@ -15,7 +19,7 @@ const useForm = (type) => {
   function validate(value) {
     if (type === false) return true;
     if (value.length === 0) {
-      setError("Preencha um email valido");
+      setError("Preencha um valor valido");
       return false;
     } else if (types[type] && !types[type].regex.test(value)) {
       setError(types[type].message);
