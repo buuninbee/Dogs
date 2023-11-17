@@ -20,6 +20,7 @@ const Loading = () => {
   const displayStep = (i) => {
     return { display: step === i ? "block" : "none" };
   };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.loading}>
