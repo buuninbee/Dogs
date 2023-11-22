@@ -22,6 +22,11 @@
   margin-bottom: 2rem;
 }
 
+.cadastro {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .subtitile {
   font-family: var(--type-second);
   line-height: 1;
